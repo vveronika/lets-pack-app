@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/lets-pack-app/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/lets-pack-app/static/js/main.0c0fedc2.chunk.js",
+    "main.js.map": "/lets-pack-app/static/js/main.0c0fedc2.chunk.js.map",
+    "runtime-main.js": "/lets-pack-app/static/js/runtime-main.1542fe63.js",
+    "runtime-main.js.map": "/lets-pack-app/static/js/runtime-main.1542fe63.js.map",
+    "static/js/2.56d464eb.chunk.js": "/lets-pack-app/static/js/2.56d464eb.chunk.js",
+    "static/js/2.56d464eb.chunk.js.map": "/lets-pack-app/static/js/2.56d464eb.chunk.js.map",
+    "index.html": "/lets-pack-app/index.html",
+    "precache-manifest.0f229916d0a3e61d4ffbcb12154bc14d.js": "/lets-pack-app/precache-manifest.0f229916d0a3e61d4ffbcb12154bc14d.js",
+    "service-worker.js": "/lets-pack-app/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/lets-pack-app/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.56d464eb.chunk.js.LICENSE": "/lets-pack-app/static/js/2.56d464eb.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1542fe63.js",
+    "static/js/2.56d464eb.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.0c0fedc2.chunk.js"
+  ]
+}
