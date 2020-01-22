@@ -5,20 +5,25 @@ import {
   SelectsWrapper,
 } from './style';
 import { RouteComponentProps } from 'react-router-dom';
-import { fetchCountries } from '../../redux/actions';
+import { fetchCountries, addJourney } from '../../redux/actions';
 import SearchableSelect from '../../components/SearchableSelect';
 import * as FORM_DATA from '../../constants/formData';
 import ChooseTileContainer from './components/ChooseTileContainer';
 import Button from '../../components/Button';
 import { Country } from '../../models/country';
+import { Journey } from '../../models/journey';
 
 interface IProps {
   countries: Country[],
   fetchCountries: () => void;
+  addJourney: (payload: Journey) => void
 }
 
 interface IState {
-  country: string,
+  country: {
+    value: string,
+    label: string,
+  },
   month: string,
   duration: string,
   standard: string,
@@ -32,7 +37,10 @@ class FormScreen extends React.Component<Props, IState> {
       super(props);
 
       this.state = {
-        country: "",
+        country: {
+          value: "",
+          label: "",
+        },
         month: "",
         duration: "",
         standard: "",
@@ -53,6 +61,10 @@ class FormScreen extends React.Component<Props, IState> {
 
     formSubmit = () => {
       this.props.history.push('./under-construction');
+      const { country, month, duration, standard } = this.state;
+      this.props.addJourney({
+        id: 1, title: country.label, country, month, duration, standard,
+      })
     }
 
     render() {
@@ -105,6 +117,7 @@ const mapStateToProps = (state: any) => {
 const mapDispatchToProps = (dispatch: Function) => {
     return {
       fetchCountries: () => dispatch(fetchCountries()),
+      addJourney: (payload: Journey) => dispatch(addJourney(payload)),
     };
   };
 

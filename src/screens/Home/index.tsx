@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import {
-  HomeWrapper,
   HomeContent,
   TilesContainer,
   DestinationsContainer,
@@ -27,7 +26,7 @@ const HomeScreen = (props: Props) => {
   }
 
   return (
-    <HomeWrapper>
+    <Fragment>
       <TilesContainer>
         {INFORMATION_DATA.HOME_DECORATION_TILES.map(tile => (
           <DecorationTile 
@@ -38,15 +37,15 @@ const HomeScreen = (props: Props) => {
           />
         ))}
       </TilesContainer>
-      <HomeContent>
-        <Button label="Fill a form" clickHandler={goToForm} />
-      </HomeContent>
       <DestinationsContainer>
         {props.journeys.map(journey => (
           <JourneyTile key={journey.id} title={journey.title} />
         ))}
       </DestinationsContainer>
-    </HomeWrapper>
+      <HomeContent>
+        <Button label={props.journeys ? "Add your next journey" : "Create your first journey"} clickHandler={goToForm} />
+      </HomeContent>
+    </Fragment>
   );
 };
 

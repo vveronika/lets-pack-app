@@ -10,6 +10,7 @@ export const TileWrapper = styled.div`
     flex-direction: column;
     border-color: ${props => props.borderStyle};
     padding: 10px;
+    margin: 15px;
 `;
 
 export const Title = styled.div`
