@@ -16,7 +16,7 @@ const SearchableSelect: React.SFC<IProps> = ({options, label, onChange, valueKey
         {label}
       </SelectLabel>
       <Select
-          isClearable
+          isClearable={false}
           isSearchable
           name="countrySelect"
           options={options}

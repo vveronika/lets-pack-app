@@ -24,7 +24,7 @@ const HomeScreen = (props: Props) => {
   const goToForm = () => {
     props.history.push('/form');
   }
-
+  
   return (
     <Fragment>
       <TilesContainer>
@@ -43,7 +43,12 @@ const HomeScreen = (props: Props) => {
         ))}
       </DestinationsContainer>
       <HomeContent>
-        <Button label={props.journeys ? "Add your next journey" : "Create your first journey"} clickHandler={goToForm} />
+        <Button
+          label={props.journeys.length !== 0 ? 
+          "Add your next journey" :
+          "Create your first journey"}
+          clickHandler={goToForm}
+        />
       </HomeContent>
     </Fragment>
   );

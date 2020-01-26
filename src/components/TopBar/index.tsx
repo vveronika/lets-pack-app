@@ -17,13 +17,13 @@ const TopBar: React.SFC<IProps> = ({
     subtitle,
 }) => {
   return (
-      <BarWrapper>
-          <TextWrapper>
+    <BarWrapper to="/">
+        <TextWrapper>
             <PageTitle>{title}</PageTitle>
             <PageSubTitle>{subtitle}</PageSubTitle>
-          </TextWrapper>
-              <PageLogo src="https://zloty-interes.pl/wp-content/uploads/2018/11/Travel-PNG-Clipart-1024x1024.png" />
-      </BarWrapper>
+        </TextWrapper>
+        <PageLogo src="https://zloty-interes.pl/wp-content/uploads/2018/11/Travel-PNG-Clipart-1024x1024.png" />
+    </BarWrapper>
   );
 };
 

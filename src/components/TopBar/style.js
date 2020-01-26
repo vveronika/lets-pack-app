@@ -1,11 +1,13 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const BarWrapper = styled.div`
+export const BarWrapper = styled(Link)`
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
     margin-bottom: 40px;
+    text-decoration: none;
 
     @media (min-width: 700px) {
         flex-direction: row;

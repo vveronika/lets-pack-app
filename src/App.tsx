@@ -15,8 +15,8 @@ const App = () => {
   return (
     <Provider store={store}>
       <AppContainer>
-        <TopBar title="Let's pack!" subtitle="Get everything you need before your next journey" />
         <Router history={history}>
+          <TopBar title="Let's pack!" subtitle="Get everything you need before your next journey" />
           <Switch>
             <Route
               exact
